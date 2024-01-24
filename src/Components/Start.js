@@ -8,7 +8,7 @@ export default function Start({ setPage, page }) {
 
   setTimeout(() => {
     setDisplay(true);
-  }, 6000);
+  }, 4000);
 
   const videoRef = useRef(null);
 
@@ -38,7 +38,7 @@ export default function Start({ setPage, page }) {
               {display && <p className="sign">Made by AHF</p>}
               <div>
                 <Header
-                  display="WELCOME TO MULTIVERSE OF MADNESS"
+                  display="WELCOME STRANGER"
                   delay={150}
                   repeat={false}
                 ></Header>
