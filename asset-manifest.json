@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio2.0/static/css/main.a9ab8c91.css",
-    "main.js": "/portfolio2.0/static/js/main.1a5f9cd3.js",
+    "main.css": "/portfolio2.0/static/css/main.1cd07029.css",
+    "main.js": "/portfolio2.0/static/js/main.c81a4f16.js",
     "static/media/Blender_Project.mp4": "/portfolio2.0/static/media/Blender_Project.01ca75319f32cdcdf394.mp4",
     "static/media/SplitwiseApp.mp4": "/portfolio2.0/static/media/SplitwiseApp.98498384c7f479c4be79.mp4",
     "static/media/space.mp4": "/portfolio2.0/static/media/space.7717348e2991d32497f4.mp4",
@@ -17,11 +17,11 @@
     "static/media/C.png": "/portfolio2.0/static/media/C.efa542f5758aecfd96dd.png",
     "static/media/java.png": "/portfolio2.0/static/media/java.6c64373d3b7415758078.png",
     "index.html": "/portfolio2.0/index.html",
-    "main.a9ab8c91.css.map": "/portfolio2.0/static/css/main.a9ab8c91.css.map",
-    "main.1a5f9cd3.js.map": "/portfolio2.0/static/js/main.1a5f9cd3.js.map"
+    "main.1cd07029.css.map": "/portfolio2.0/static/css/main.1cd07029.css.map",
+    "main.c81a4f16.js.map": "/portfolio2.0/static/js/main.c81a4f16.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9ab8c91.css",
-    "static/js/main.1a5f9cd3.js"
+    "static/css/main.1cd07029.css",
+    "static/js/main.c81a4f16.js"
   ]
 }
