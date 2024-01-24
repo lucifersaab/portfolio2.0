@@ -24,6 +24,12 @@ export default function Navbar({ scrollToSection }) {
             </div>
             <div
               className="navbar-content"
+              onClick={() => scrollToSection("section4Ref")}
+            >
+              PROJECTS
+            </div>
+            <div
+              className="navbar-content"
               onClick={() => scrollToSection("section3Ref")}
             >
               CONTACT
@@ -37,13 +43,12 @@ export default function Navbar({ scrollToSection }) {
             >
               <img src={linkedin} alt="linkedIn" />
             </a>
-            <a href="https://github.com/lucifersaab">
-              <img
-                src={git}
-                alt="Github"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
+            <a
+              href="https://github.com/lucifersaab"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={git} alt="Github" style={{ borderRadius: "40px" }} />
             </a>
             <a
               href="https://www.instagram.com/hashimf77/"

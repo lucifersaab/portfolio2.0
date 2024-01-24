@@ -11,6 +11,8 @@ export default function Header({ display, delay, repeat }) {
     if (index >= display.length) {
       if (repeat === true) {
         setText("");
+      } else {
+        setCursor("");
       }
     } else {
       const updatedtext = text.concat(display.charAt(index));
@@ -35,10 +37,10 @@ export default function Header({ display, delay, repeat }) {
 
   return (
     <div>
-      <h1>
+      <p>
         {text}
         {cursor}
-      </h1>
+      </p>
     </div>
   );
 }
