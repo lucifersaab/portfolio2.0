@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio2.0/static/css/main.a853bedd.css",
-    "main.js": "/portfolio2.0/static/js/main.c0908019.js",
+    "main.css": "/portfolio2.0/static/css/main.a9ab8c91.css",
+    "main.js": "/portfolio2.0/static/js/main.1a5f9cd3.js",
     "static/media/Blender_Project.mp4": "/portfolio2.0/static/media/Blender_Project.01ca75319f32cdcdf394.mp4",
     "static/media/SplitwiseApp.mp4": "/portfolio2.0/static/media/SplitwiseApp.98498384c7f479c4be79.mp4",
     "static/media/space.mp4": "/portfolio2.0/static/media/space.7717348e2991d32497f4.mp4",
     "static/media/Pacman-Game.mp4": "/portfolio2.0/static/media/Pacman-Game.ada2e9444a5f83b6a9c2.mp4",
     "static/media/BurgerApp.mp4": "/portfolio2.0/static/media/BurgerApp.47e5bc4c4c3a2de44fb0.mp4",
+    "static/media/tweety_gif.gif": "/portfolio2.0/static/media/tweety_gif.23e7df51ee8e59f5fd48.gif",
+    "static/media/coding_gif.gif": "/portfolio2.0/static/media/coding_gif.05f035b3a27b38553a6a.gif",
     "static/media/SQL.png": "/portfolio2.0/static/media/SQL.2f803ad2c46d3f5e511c.png",
     "static/media/Blender.png": "/portfolio2.0/static/media/Blender.825464621b67a6ef8866.png",
     "static/media/link.png": "/portfolio2.0/static/media/link.a680cb8ad2b88be03d17.png",
@@ -15,11 +17,11 @@
     "static/media/C.png": "/portfolio2.0/static/media/C.efa542f5758aecfd96dd.png",
     "static/media/java.png": "/portfolio2.0/static/media/java.6c64373d3b7415758078.png",
     "index.html": "/portfolio2.0/index.html",
-    "main.a853bedd.css.map": "/portfolio2.0/static/css/main.a853bedd.css.map",
-    "main.c0908019.js.map": "/portfolio2.0/static/js/main.c0908019.js.map"
+    "main.a9ab8c91.css.map": "/portfolio2.0/static/css/main.a9ab8c91.css.map",
+    "main.1a5f9cd3.js.map": "/portfolio2.0/static/js/main.1a5f9cd3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a853bedd.css",
-    "static/js/main.c0908019.js"
+    "static/css/main.a9ab8c91.css",
+    "static/js/main.1a5f9cd3.js"
   ]
 }
