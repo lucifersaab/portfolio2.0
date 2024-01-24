@@ -21,7 +21,7 @@ export default function Intro() {
           </div>
 
           <div className="right-div">
-            <img className="gif-img" src={gif1} alt="me" />
+            <img className="gif-img" src={gif1} alt="person working" />
           </div>
         </div>
       </div>

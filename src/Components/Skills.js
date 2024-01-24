@@ -125,16 +125,19 @@ export default function Skills(props) {
             <div className="right-col">
               <div className="skillbar-container2">
                 <SkillBar content={"SQL"} progress={80} bar={2}></SkillBar>
-                <SkillBar content={"BLENDER"} progress={75} bar={2}></SkillBar>
+                <SkillBar content={"BLENDER"} progress={80} bar={2}></SkillBar>
               </div>
             </div>
           </div>
-          <div onClick={displaySkills} className="skills-wheel">
+          <div
+            onClick={displaySkills}
+            className={"skills-wheel" + (showSkills ? " rotate" : " rotate2")}
+          >
             <div style={{ width: "100%" }}>
               <h3>SKILLS WHEEL</h3>
             </div>
             <div style={{ width: "100%" }}>
-              <p>Click to view skills</p>
+              {!showSkills && <p>Click to view skills</p>}
             </div>
           </div>
         </div>

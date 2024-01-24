@@ -322,6 +322,17 @@
   /* margin: 10px; */
 }
 
+.rotate {
+  transform-origin: center center;
+  transform: rotate(360deg);
+  transition: transform 1.5s;
+}
+
+.rotate2 {
+  transform-origin: center center;
+  transform: rotate(-360deg);
+  transition: transform 1.5s;
+}
 .skillbar-content {
   margin-left: 20px;
   display: flex;
