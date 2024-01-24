@@ -24,7 +24,7 @@ export default function Main({ section1Ref, section2Ref }) {
       <About section1Ref={section1Ref}></About>
       <div ref={section2Ref}></div>
       <Skills setState={handlePreview}></Skills>
-      <Preview projectPreview={projectPreview}></Preview>
+      {/* <Preview projectPreview={projectPreview}></Preview> */}
     </>
   );
 }
