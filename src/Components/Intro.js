@@ -7,7 +7,7 @@ export default function Intro() {
         <Header
           display={"Welcome to my portfolio!"}
           delay={100}
-          repeat={true}
+          repeat={false}
         ></Header>
       </div>
       <div className="main-div">

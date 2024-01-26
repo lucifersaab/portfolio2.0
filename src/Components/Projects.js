@@ -13,6 +13,7 @@ import Pacman from "./../Media/Pacman-Game.mp4";
 import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
+import Header from "./Header";
 
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
@@ -57,6 +58,15 @@ export default function Projects({ section4Ref }) {
     <>
       <div ref={section4Ref}></div>
       <div id="spline-element">
+        {!isSplineLoaded && (
+          <div className="centered-div">
+            <Header
+              display="LOADING PROJECTS..."
+              delay={20}
+              repeat={true}
+            ></Header>{" "}
+          </div>
+        )}
         {isSplineLoaded && (
           <Spline
             onClick={handleclick}
