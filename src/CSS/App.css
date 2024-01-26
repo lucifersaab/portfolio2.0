@@ -366,6 +366,7 @@
   padding: 50px;
   transition: 0.5s ease-in;
 }
+
 .parent-bar {
   width: 100%;
   height: 20px;
@@ -512,12 +513,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: 0;
-  visibility: hidden; */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   z-index: 1000;
 }
@@ -531,12 +530,7 @@
   background-color: rgba(28, 28, 28, 0.882);
   display: flex;
   flex-wrap: wrap;
-  /* height: 50px; */
-  /* padding: 10px 0 0 0; */
   border: #909090d6 solid 1px;
-  /* outline: white;
-   */
-  /* box-shadow: 0 10px 30px 5px rgba(82, 82, 82, 0.54); */
 }
 .popup-content {
   width: 70%;
@@ -550,7 +544,7 @@
 }
 
 .tab {
-  /* margin: auto 20px; */
+  margin-top: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   display: flex;
@@ -594,13 +588,41 @@
   color: white;
   height: 100%;
   padding: 10px 20px;
-  /* font-size: 14px; */
   cursor: pointer;
 }
 
 .close-button:hover {
-  height: 100%;
   background-color: red;
+}
+
+.thumbnail-container {
+  position: relative;
+  height: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  margin: 5px 10px;
+}
+
+.thumbnail:hover {
+  /* background-color: gray; */
+  box-shadow: 0 0px 16px 5px rgba(0, 211, 231, 0.786);
+
+  cursor: pointer;
+}
+
+.thumbnail img {
+  height: 90px;
+  width: 120px;
 }
 
 .projects {
@@ -614,16 +636,39 @@
 }
 
 .preview-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  text-align: center;
-  transition: display 2s;
+  height: 95%;
 }
 
 .video-preview {
-  width: 60%;
-  box-shadow: 0 0px 16px 5px rgba(0, 211, 231, 0.786);
+  /* position: absolute; */
+  z-index: 1;
+  width: 100%;
+  height: 90%;
+}
+.close-vid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
+  z-index: 2;
+  padding: 10px 20px;
 }
 
+.close-vid:hover {
+  cursor: pointer;
+  background-color: gray;
+  /* transition: color 0.5s; */
+}
+
+.hide-vid {
+  display: none;
+}
 .whatsapp-img {
   position: absolute;
   bottom: 10px;
@@ -731,12 +776,23 @@ form {
   height: 60px;
   font-size: 20px;
   text-align: center;
-  animation: glowbtn 1s infinite;
   background: none;
   color: white;
-  transition: ease-in;
-  z-index: 1;
+  opacity: 0; /* Start with opacity set to 0 */
+  visibility: hidden; /* Start with visibility set to hidden */
+  transition: opacity 1s ease-in, visibility 1s ease-in; /* Add transition for opacity and visibility */
   cursor: pointer;
+}
+
+.show-btn {
+  opacity: 1;
+  visibility: visible;
+  animation: glowbtn 0.75s infinite;
+}
+
+.hide-simple {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes glowbtn {
@@ -745,7 +801,7 @@ form {
       0 0 5px #00e63d, 0 0 6px #00e66b, 0 0 7px #055e46;
   }
 
-  70% {
+  50% {
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #215730, 0 0 10px #73ebbf,
       0 0 12px #50e778, 0 0 15px #60eaa1, 0 0 17px #276353;
   }

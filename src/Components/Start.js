@@ -35,18 +35,17 @@ export default function Start({ setPage, page }) {
         <div className="start-screen">
           <div className="centered-div">
             <div className="welcome-div">
-              {display && <p className="sign">Made by AHF</p>}
-              <div>
-                <Header
-                  display="WELCOME STRANGER"
-                  delay={150}
-                  repeat={false}
-                ></Header>
-              </div>
+              <Header
+                display="WELCOME STRANGER"
+                delay={150}
+                repeat={false}
+              ></Header>
               <div>
                 <button
                   onClick={() => changepage("second")}
-                  className={display ? "start-btn" : "hide"}
+                  className={`start-btn ${
+                    display ? "show-btn" : "hide-simple"
+                  }`}
                 >
                   GET STARTED
                 </button>

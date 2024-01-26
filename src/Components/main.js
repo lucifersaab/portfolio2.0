@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Skills from "./Skills";
-import Preview from "./Preview";
 import "./../CSS/App.css";
 import Intro from "./Intro";
 import About from "./About";

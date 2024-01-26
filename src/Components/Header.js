@@ -12,17 +12,16 @@ export default function Header({ display, delay, repeat }) {
       if (repeat === true) {
         setText("");
       } else {
-        setCursor("");
+        setCursor(" ");
       }
     } else {
       const updatedtext = text.concat(display.charAt(index));
       setText(updatedtext);
-    }
-
-    if (cursor === " ") {
-      setCursor("_");
-    } else {
-      setCursor(" ");
+      if (cursor === " ") {
+        setCursor("_");
+      } else {
+        setCursor(" ");
+      }
     }
   };
 
