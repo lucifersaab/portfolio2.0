@@ -18,6 +18,7 @@ function App() {
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
 
   const scrollToSection = (sectionRef) => {
     console.log(sectionRef);
@@ -26,8 +27,10 @@ function App() {
       sr = section1Ref;
     } else if (sectionRef === "section2Ref") {
       sr = section2Ref;
-    } else {
+    } else if (sectionRef === "section3Ref") {
       sr = section3Ref;
+    } else {
+      sr = section4Ref;
     }
     if (sr.current) {
       sr.current.scrollIntoView({ behavior: "smooth" });
@@ -57,7 +60,11 @@ function App() {
         <div className="theme">
           <Navbar scrollToSection={scrollToSection}></Navbar>
           {/* <Main section1Ref={section1Ref} section2Ref={section2Ref}></Main> */}
-          <Main section1Ref={section1Ref} section2Ref={section2Ref}></Main>
+          <Main
+            section1Ref={section1Ref}
+            section2Ref={section2Ref}
+            section4Ref={section4Ref}
+          ></Main>
           <Whatsapp></Whatsapp>
           <Contact></Contact>
           <div ref={section3Ref}></div>

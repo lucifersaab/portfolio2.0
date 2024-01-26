@@ -4,8 +4,9 @@ import Preview from "./Preview";
 import "./../CSS/App.css";
 import Intro from "./Intro";
 import About from "./About";
+import Projects from "./Projects";
 
-export default function Main({ section1Ref, section2Ref }) {
+export default function Main({ section1Ref, section2Ref, section4Ref }) {
   const [projectPreview, setProjectPreview] = useState("");
 
   const handlePreview = (preview) => {
@@ -24,6 +25,7 @@ export default function Main({ section1Ref, section2Ref }) {
       <About section1Ref={section1Ref}></About>
       <div ref={section2Ref}></div>
       <Skills setState={handlePreview}></Skills>
+      <Projects section4Ref={section4Ref}></Projects>
       {/* <Preview projectPreview={projectPreview}></Preview> */}
     </>
   );
