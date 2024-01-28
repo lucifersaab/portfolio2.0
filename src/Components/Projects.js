@@ -58,15 +58,7 @@ export default function Projects({ section4Ref }) {
     <>
       <div ref={section4Ref}></div>
       <div id="spline-element">
-        {!isSplineLoaded && (
-          <div className="centered-div">
-            <Header
-              display="LOADING PROJECTS..."
-              delay={20}
-              repeat={true}
-            ></Header>{" "}
-          </div>
-        )}
+        {!isSplineLoaded && <div>Loading Spline Object...</div>}
         {isSplineLoaded && (
           <Spline
             onClick={handleclick}

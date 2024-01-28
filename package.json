@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^1.0.36",
+    "@splinetool/runtime": "^1.0.38",
     "@tsparticles/engine": "^3.1.0",
     "@tsparticles/react": "^3.0.0",
     "emailjs-com": "^3.2.0",

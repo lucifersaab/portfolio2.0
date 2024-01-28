@@ -2,10 +2,34 @@ import "./../CSS/App.css";
 import linkedin from "./../Media/link.png";
 import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
+import { useEffect, useState } from "react";
+import VerticalNav from "./VerticalNav";
 export default function Navbar({ scrollToSection }) {
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      const navbarPosition = navbar.getBoundingClientRect().top;
+
+      if (navbarPosition < 0) {
+        setNavbarVisible(false);
+      } else {
+        setNavbarVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    console.log(navbarVisible);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [navbarVisible]);
+
   return (
     <>
-      <div className="nav-container">
+      <div className="nav-container" id="navbar">
         <div className="navbar">
           <div className="name">Ahmad Hashim Farooq</div>
           <div className="nav-links">
@@ -59,6 +83,14 @@ export default function Navbar({ scrollToSection }) {
             </a>
           </div>
         </div>
+      </div>
+
+      <div
+        className={navbarVisible ? "hide" : "show-btn"}
+        style={{ position: "absolute" }}
+      >
+        {" "}
+        <VerticalNav scrollToSection={scrollToSection}></VerticalNav>
       </div>
     </>
   );

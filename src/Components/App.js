@@ -9,8 +9,9 @@ import Whatsapp from "./Whatsapp";
 import Contact from "./Contact";
 import Start from "./Start.js";
 import { useRef } from "react";
+import VerticalNav from "./VerticalNav.js";
 function App() {
-  const [page, setPage] = useState("first"); //change this to first
+  const [page, setPage] = useState("third"); //change this to first
 
   const updatePage = (val) => {
     setPage(val);
@@ -59,13 +60,14 @@ function App() {
       ) : (
         <div className="theme">
           <Navbar scrollToSection={scrollToSection}></Navbar>
+          {/* <VerticalNav scrollToSection={scrollToSection}></VerticalNav> */}
           {/* <Main section1Ref={section1Ref} section2Ref={section2Ref}></Main> */}
           <Main
             section1Ref={section1Ref}
             section2Ref={section2Ref}
             section4Ref={section4Ref}
           ></Main>
-          <Whatsapp></Whatsapp>
+          {/* <Whatsapp></Whatsapp> */}
           <Contact></Contact>
           <div ref={section3Ref}></div>
         </div>

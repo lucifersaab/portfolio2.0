@@ -67,6 +67,7 @@ export default function Contact() {
                 id="message-input"
                 placeholder="Please enter your query"
                 value={message}
+                // style={{ height: "50px" }}
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
