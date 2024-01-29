@@ -133,12 +133,8 @@ export default function Skills(props) {
             onClick={displaySkills}
             className={"skills-wheel" + (showSkills ? " rotate" : " rotate2")}
           >
-            <div style={{ width: "100%" }}>
-              <h3>SKILLS WHEEL</h3>
-            </div>
-            <div style={{ width: "100%" }}>
-              {!showSkills && <p>Click to view skills</p>}
-            </div>
+            <div className="skill-wheel-content">SKILLS WHEEL</div>
+            <div>{!showSkills && <p>Click to view skills</p>}</div>
           </div>
         </div>
       </div>

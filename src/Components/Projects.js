@@ -66,7 +66,7 @@ export default function Projects({ section4Ref }) {
           style={{
             position: "absolute",
             color: "white",
-            left: "40%",
+            left: "36%",
             top: "295%",
             width: "60px",
             height: "60px",

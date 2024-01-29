@@ -15,7 +15,7 @@ export default function About({ section1Ref }) {
           </div>
           <div className="right-text-div">
             {intro}
-            <p>{"<-- Me working with react"} </p>
+            <p className="pointing-text">{"<-- Me working with react"} </p>
           </div>
         </div>
       </div>
