@@ -21,7 +21,7 @@ export default function Start({ setPage, page }) {
     if (page === "second") {
       setTimeout(() => {
         setPage("third");
-      }, 5000);
+      }, 6000);
     }
   }, [page, setPage]);
 

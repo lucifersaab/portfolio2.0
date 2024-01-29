@@ -2,6 +2,7 @@ import "./../CSS/App.css";
 import linkedin from "./../Media/link.png";
 import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
+import Whatsapp from "./Whatsapp";
 import { useEffect, useState } from "react";
 import VerticalNav from "./VerticalNav";
 export default function Navbar({ scrollToSection }) {
@@ -12,7 +13,8 @@ export default function Navbar({ scrollToSection }) {
       const navbar = document.getElementById("navbar");
       const navbarPosition = navbar.getBoundingClientRect().top;
 
-      if (navbarPosition < 0) {
+      console.log("pos: ", navbarPosition);
+      if (navbarPosition < -70) {
         setNavbarVisible(false);
       } else {
         setNavbarVisible(true);
@@ -81,6 +83,7 @@ export default function Navbar({ scrollToSection }) {
             >
               <img src={insta} alt="Instagram" />
             </a>
+            {/* <Whatsapp></Whatsapp> */}
           </div>
         </div>
       </div>
