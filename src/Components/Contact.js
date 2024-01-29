@@ -19,12 +19,14 @@ export default function Contact() {
       })
       .then((response) => {
         console.log("Email sent successfully:", response);
-        // Clear input fields after successful email sending
+        alert("Message sent successfully!");
+
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
+        alert("Email sending failed:", error);
         console.error("Email sending failed:", error);
       });
   };

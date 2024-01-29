@@ -2,10 +2,9 @@ import "./../CSS/App.css";
 import linkedin from "./../Media/link.png";
 import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
-import Whatsapp from "./Whatsapp";
 import { useEffect, useState } from "react";
 import VerticalNav from "./VerticalNav";
-export default function Navbar({ scrollToSection }) {
+export default function Navbar({ darkMode, scrollToSection }) {
   const [navbarVisible, setNavbarVisible] = useState(true);
 
   useEffect(() => {
@@ -32,36 +31,38 @@ export default function Navbar({ scrollToSection }) {
   return (
     <>
       <div className="nav-container" id="navbar">
-        <div className="navbar">
-          <div className="name">Ahmad Hashim Farooq</div>
+        <div className={darkMode ? "navbar" : "dark-navbar"}>
+          <div className={darkMode ? "name" : "dark-name"}>
+            Ahmad Hashim Farooq
+          </div>
           <div className="nav-links">
             {" "}
             <div
-              className="navbar-content"
+              className={darkMode ? "navbar-content" : "dark-navbar-content"}
               onClick={() => scrollToSection("section1Ref")}
             >
               ABOUT
             </div>
             <div
-              className="navbar-content"
+              className={darkMode ? "navbar-content" : "dark-navbar-content"}
               onClick={() => scrollToSection("section2Ref")}
             >
               SKILLS
             </div>
             <div
-              className="navbar-content"
+              className={darkMode ? "navbar-content" : "dark-navbar-content"}
               onClick={() => scrollToSection("section4Ref")}
             >
               PROJECTS
             </div>
             <div
-              className="navbar-content"
+              className={darkMode ? "navbar-content" : "dark-navbar-content"}
               onClick={() => scrollToSection("section3Ref")}
             >
               CONTACT
             </div>
           </div>
-          <div className="nav-socials">
+          <div className="navbar-socials">
             <a
               href="https://www.linkedin.com/in/ahmad-hashim-farooq-9a955120a/"
               target="_blank"

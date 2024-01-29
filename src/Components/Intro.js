@@ -12,7 +12,7 @@ export default function Intro() {
       </div>
       <div className="main-div">
         <div className="intro-container">
-          <div className="left-text-div" style={{ width: "700px" }}>
+          <div className="left-text-div">
             <Header
               display="Hello world! I am Ahmad Hashim Farooq, a passionate web developer with a knack for turning ideas into beautiful, functional websites. With experience in front-end and back-end development, I bring creativity and technical expertise to every project."
               delay={15}

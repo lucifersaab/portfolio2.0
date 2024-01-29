@@ -1,7 +1,5 @@
-// import Spline from "@splinetool/react-spline";
 import { useState, useEffect } from "react";
 import React, { Suspense } from "react";
-
 import up from "./../Media/up.png";
 import down from "./../Media/down.png";
 import refresh from "./../Media/refresh.png";
@@ -15,9 +13,6 @@ import Pacman from "./../Media/Pacman-Game.mp4";
 import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
-import Header from "./Header";
-import Spline from "@splinetool/react-spline";
-
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
   const [displayVideo, setDisplayVideo] = useState("");
@@ -31,8 +26,6 @@ export default function Projects({ section4Ref }) {
   const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
   useEffect(() => {
-    // Lazy loading logic here, e.g., IntersectionObserver
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -63,9 +56,6 @@ export default function Projects({ section4Ref }) {
     <>
       <div ref={section4Ref}></div>
       <div id="spline-element">
-        {/* <Suspense fallback={<div>Loading...</div>}>
-          <Spline scene="https://prod.spline.design/1hn6pUDV5jbdLWDC/scene.splinecode" />
-        </Suspense> */}
         {!isSplineLoaded && <div>Loading Spline Object...</div>}
         {isSplineLoaded && (
           <Suspense fallback={<div style={{ color: "white" }}>Loading...</div>}>
@@ -76,8 +66,8 @@ export default function Projects({ section4Ref }) {
           style={{
             position: "absolute",
             color: "white",
-            left: "37%",
-            top: "315%",
+            left: "40%",
+            top: "295%",
             width: "60px",
             height: "60px",
           }}
