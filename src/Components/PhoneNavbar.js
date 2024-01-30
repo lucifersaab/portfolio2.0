@@ -42,7 +42,9 @@ export default function PhoneNavbar({ scrollToSection }) {
       <div className="display-name">
         <h2>Ahmad Hashim Farooq</h2>
         <button onClick={setDisplay} className="navbar-button">
-          bar
+          ____<br></br>
+          ____<br></br>
+          ____
         </button>
       </div>
       <div

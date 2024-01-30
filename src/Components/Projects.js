@@ -13,7 +13,6 @@ import Pacman from "./../Media/Pacman-Game.mp4";
 import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
-import Header from "./Header";
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
   const [displayVideo, setDisplayVideo] = useState("");
@@ -27,6 +26,9 @@ export default function Projects({ section4Ref }) {
   const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
   useEffect(() => {
+    if (window.screen.availWidth < 769) {
+      setDisplayProjects(true);
+    }
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -56,32 +58,34 @@ export default function Projects({ section4Ref }) {
   return (
     <>
       <div ref={section4Ref}></div>
-      <div id="spline-element">
-        {!isSplineLoaded && <div>Loading...</div>}
-        {isSplineLoaded && (
-          <Suspense
-            fallback={
-              <div className="centered-div">
-                {" "}
-                <div className="heading-cont">Loading</div>{" "}
-              </div>
-            }
+      <div className="no-disply">
+        <div id="spline-element">
+          {!isSplineLoaded && <div>Loading...</div>}
+          {isSplineLoaded && (
+            <Suspense
+              fallback={
+                <div className="centered-div">
+                  {" "}
+                  <div className="heading-cont">Loading</div>{" "}
+                </div>
+              }
+            >
+              <Spline scene="https://prod.spline.design/1hn6pUDV5jbdLWDC/scene.splinecode" />
+            </Suspense>
+          )}
+          <div
+            style={{
+              position: "absolute",
+              color: "white",
+              left: "36%",
+              top: "295%",
+              width: "60px",
+              height: "60px",
+            }}
+            onClick={handleclick}
           >
-            <Spline scene="https://prod.spline.design/1hn6pUDV5jbdLWDC/scene.splinecode" />
-          </Suspense>
-        )}
-        <div
-          style={{
-            position: "absolute",
-            color: "white",
-            left: "36%",
-            top: "295%",
-            width: "60px",
-            height: "60px",
-          }}
-          onClick={handleclick}
-        >
-          {" "}
+            {" "}
+          </div>
         </div>
       </div>
 
@@ -90,6 +94,9 @@ export default function Projects({ section4Ref }) {
         id={displayProjects}
       >
         <div className="popup-content">
+          <div className="projects-heading">
+            <h2>PROJECTS</h2>
+          </div>
           <div className="popup-header">
             <div
               className="left-col"

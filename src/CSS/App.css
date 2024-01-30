@@ -818,6 +818,9 @@ h2 {
   width: 120px;
 }
 
+.projects-heading {
+  display: none;
+}
 .projects {
   margin: 10px 0;
   font-size: 25px;
@@ -1028,6 +1031,9 @@ form {
   height: 100vh;
   object-fit: cover;
 }
+.no-disply {
+  display: inline;
+}
 
 @keyframes projectGlow {
   0% {
@@ -1042,6 +1048,10 @@ form {
 }
 
 @media (max-width: 768px) {
+  .no-disply {
+    display: none;
+  }
+
   .display-name {
     z-index: 10;
     display: flex;
@@ -1106,7 +1116,7 @@ form {
   .navbar-button {
     height: 80%;
     background-color: #000000;
-    padding: 10px;
+    padding: 0px 15px 12px 15px;
     color: white;
     margin: auto 0;
     border: white solid 2px;
@@ -1323,6 +1333,34 @@ form {
     z-index: -1;
   }
 
+  .close-button {
+    display: none;
+  }
+  .popup {
+    position: relative;
+  }
+
+  .popup-content {
+    margin: 10vh auto;
+    width: 95%;
+  }
+
+  .projects-heading {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.5vh;
+    font-weight: bold;
+  }
+
+  .thumbnail-container {
+    justify-content: center;
+  }
+
+  .thumbnail p {
+    text-align: center;
+  }
   .skill-card {
     background-color: #011518a9;
     color: white;
