@@ -77,8 +77,8 @@ export default function Projects({ section4Ref }) {
             style={{
               position: "absolute",
               color: "white",
-              left: "36%",
-              top: "295%",
+              left: "35%",
+              top: "300%",
               width: "60px",
               height: "60px",
             }}
