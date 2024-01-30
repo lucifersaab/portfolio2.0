@@ -1253,6 +1253,7 @@ form {
     height: 100px;
     width: 100px;
     font-size: 10px;
+    z-index: 6;
   }
 
   .skill-wheel-content {
