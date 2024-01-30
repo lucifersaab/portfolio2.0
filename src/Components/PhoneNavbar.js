@@ -17,11 +17,11 @@ export default function PhoneNavbar({ scrollToSection }) {
     },
     {
       text: "PROJECTS",
-      ref: "section3Ref",
+      ref: "section4Ref",
     },
     {
       text: "CONTACT",
-      ref: "section4Ref",
+      ref: "section3Ref",
     },
   ];
   // const socials=[{
