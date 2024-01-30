@@ -1100,6 +1100,8 @@ form {
   .nav-socials-a {
     width: 20vw;
     height: 20vw;
+    display: flex;
+    align-items: center;
   }
 
   .vert-nav-socials img {
@@ -1338,6 +1340,7 @@ form {
   }
   .popup {
     position: relative;
+    z-index: 5;
   }
 
   .popup-content {
