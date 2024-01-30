@@ -89,6 +89,7 @@ function App() {
             scrollToSection={scrollToSection}
           ></Navbar>
           <Main
+            scrollToSection={scrollToSection}
             section1Ref={section1Ref}
             section2Ref={section2Ref}
             section4Ref={section4Ref}

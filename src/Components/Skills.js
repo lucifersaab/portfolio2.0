@@ -77,37 +77,6 @@ export default function Skills(props) {
 
   return (
     <>
-      {/* <div className="skills-container">
-        <div className="centered-div">
-          <h2>SKILLS AND PROJECTS</h2>
-          <p>Click on project name to see preview</p>
-        </div>
-        <div className="Slide-container">
-          <button
-            className="slide-btn"
-            id="prevpage"
-            onClick={() => updatePage("prevpage")}
-          >
-            <img src={back} alt="back button" />
-          </button>
-
-          {
-            <Card
-              ref={props.ref}
-              skills={skills[page]}
-              setState={props.setState}
-            ></Card>
-          }
-
-          <button
-            className="slide-btn"
-            id="nextpage"
-            onClick={() => updatePage("nextpage")}
-          >
-            <img src={next} alt="next button" />
-          </button>
-        </div>
-      </div> */}
       <div className="skills-container">
         <div className="centered-div">
           {" "}

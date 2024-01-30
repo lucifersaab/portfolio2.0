@@ -4,8 +4,14 @@ import "./../CSS/App.css";
 import Intro from "./Intro";
 import About from "./About";
 import Projects from "./Projects";
+import PhoneNavbar from "./PhoneNavbar";
 
-export default function Main({ section1Ref, section2Ref, section4Ref }) {
+export default function Main({
+  scrollToSection,
+  section1Ref,
+  section2Ref,
+  section4Ref,
+}) {
   const [projectPreview, setProjectPreview] = useState("");
 
   const handlePreview = (preview) => {
@@ -20,6 +26,8 @@ export default function Main({ section1Ref, section2Ref, section4Ref }) {
   });
   return (
     <>
+      <PhoneNavbar scrollToSection={scrollToSection}></PhoneNavbar>
+
       <Intro></Intro>
       <About section1Ref={section1Ref}></About>
       <div ref={section2Ref}></div>

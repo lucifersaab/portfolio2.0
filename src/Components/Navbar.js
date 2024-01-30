@@ -4,6 +4,7 @@ import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
 import { useEffect, useState } from "react";
 import VerticalNav from "./VerticalNav";
+import PhoneNavbar from "./PhoneNavbar";
 export default function Navbar({ darkMode, scrollToSection }) {
   const [navbarVisible, setNavbarVisible] = useState(true);
 

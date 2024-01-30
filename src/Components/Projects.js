@@ -13,6 +13,7 @@ import Pacman from "./../Media/Pacman-Game.mp4";
 import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
+import Header from "./Header";
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
   const [displayVideo, setDisplayVideo] = useState("");
@@ -56,9 +57,16 @@ export default function Projects({ section4Ref }) {
     <>
       <div ref={section4Ref}></div>
       <div id="spline-element">
-        {!isSplineLoaded && <div>Loading Spline Object...</div>}
+        {!isSplineLoaded && <div>Loading...</div>}
         {isSplineLoaded && (
-          <Suspense fallback={<div style={{ color: "white" }}>Loading...</div>}>
+          <Suspense
+            fallback={
+              <div className="centered-div">
+                {" "}
+                <div className="heading-cont">Loading</div>{" "}
+              </div>
+            }
+          >
             <Spline scene="https://prod.spline.design/1hn6pUDV5jbdLWDC/scene.splinecode" />
           </Suspense>
         )}
