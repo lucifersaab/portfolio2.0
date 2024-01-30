@@ -1,5 +1,3 @@
-import VerticalNav from "./VerticalNav";
-
 import linkedin from "./../Media/link.png";
 import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";

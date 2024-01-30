@@ -1359,6 +1359,7 @@ form {
 
   .thumbnail-container {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .thumbnail p {

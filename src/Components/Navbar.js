@@ -4,8 +4,7 @@ import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
 import { useEffect, useState } from "react";
 import VerticalNav from "./VerticalNav";
-import PhoneNavbar from "./PhoneNavbar";
-export default function Navbar({ darkMode, scrollToSection }) {
+export default function Navbar({ scrollToSection }) {
   const [navbarVisible, setNavbarVisible] = useState(true);
 
   useEffect(() => {
@@ -32,32 +31,30 @@ export default function Navbar({ darkMode, scrollToSection }) {
   return (
     <>
       <div className="nav-container" id="navbar">
-        <div className={darkMode ? "navbar" : "dark-navbar"}>
-          <div className={darkMode ? "name" : "dark-name"}>
-            Ahmad Hashim Farooq
-          </div>
+        <div className="navbar">
+          <div className={"name"}>Ahmad Hashim Farooq</div>
           <div className="nav-links">
             {" "}
             <div
-              className={darkMode ? "navbar-content" : "dark-navbar-content"}
+              className={"navbar-content"}
               onClick={() => scrollToSection("section1Ref")}
             >
               ABOUT
             </div>
             <div
-              className={darkMode ? "navbar-content" : "dark-navbar-content"}
+              className={"navbar-content"}
               onClick={() => scrollToSection("section2Ref")}
             >
               SKILLS
             </div>
             <div
-              className={darkMode ? "navbar-content" : "dark-navbar-content"}
+              className={"navbar-content"}
               onClick={() => scrollToSection("section4Ref")}
             >
               PROJECTS
             </div>
             <div
-              className={darkMode ? "navbar-content" : "dark-navbar-content"}
+              className={"navbar-content"}
               onClick={() => scrollToSection("section3Ref")}
             >
               CONTACT

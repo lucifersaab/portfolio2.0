@@ -5,9 +5,6 @@ import sql from "./../Media/SQL.png";
 import C from "./../Media/C.png";
 import Blender from "./../Media/Blender.png";
 import SkillBar from "./SkillBar.js";
-import back from "./../Media/back.png";
-import next from "./../Media/next.png";
-import Card from "./Card";
 import { useState, useEffect } from "react";
 export default function Skills(props) {
   const [page, setPage] = useState(0);
@@ -50,18 +47,6 @@ export default function Skills(props) {
       progress: "85%",
     },
   ];
-
-  const updatePage = (id) => {
-    if (id === "prevpage") {
-      if (page === 0) {
-        setPage(4);
-      } else setPage(page - 1);
-    } else {
-      setPage((page + 1) % 5);
-    }
-
-    console.log(page);
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
