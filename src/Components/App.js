@@ -65,8 +65,9 @@ function App() {
             section2Ref={section2Ref}
             section4Ref={section4Ref}
           ></Main>
-          <Contact></Contact>
-          <div ref={section3Ref}></div>
+          <div></div>
+          <Contact section3Ref={section3Ref}></Contact>
+
           <footer>Created using React by Hashim</footer>
         </>
       )}

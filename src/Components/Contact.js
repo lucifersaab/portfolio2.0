@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./../CSS/App.css";
 
-export default function Contact() {
+export default function Contact({ section3Ref }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -54,7 +54,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label>Email</label>
+              <label ref={section3Ref}>Email</label>
               <input
                 id="mail-input"
                 type="email"
