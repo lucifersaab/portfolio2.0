@@ -33,7 +33,7 @@ function App() {
       sr = section4Ref;
     }
     if (sr.current) {
-      sr.current.scrollIntoView({ behavior: "smooth" });
+      sr.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -67,6 +67,7 @@ function App() {
           ></Main>
           <Contact></Contact>
           <div ref={section3Ref}></div>
+          <footer>Created using React by Hashim</footer>
         </>
       )}
     </div>

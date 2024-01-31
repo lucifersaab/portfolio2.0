@@ -32,6 +32,11 @@ export default function PhoneNavbar({ scrollToSection }) {
     setDisplayNav(!displayNav);
   };
 
+  const scroller = (val) => {
+    setDisplay();
+    scrollToSection(val);
+  };
+
   useEffect(() => {
     console.log(displayNav);
   }, [displayNav]);
@@ -89,10 +94,9 @@ export default function PhoneNavbar({ scrollToSection }) {
             return (
               <div
                 className="vert-navbar-content"
-                onClick={() => scrollToSection(nav.ref)}
+                onClick={() => scroller(nav.ref)}
                 style={{
-                  rotate: updated_rotate + "deg",
-                  marginLeft: -Math.abs(updated_rotate * 6) + 120 + "px",
+                  marginRight: Math.abs(updated_rotate * 1.6) + "%",
                 }}
               >
                 {nav.text}
