@@ -1,6 +1,7 @@
 import linkedin from "./../Media/link.png";
 import git from "./../Media/git.png";
 import insta from "./../Media/insta.png";
+import hamburger from "./../Media/hamburger.png";
 import { useEffect, useState } from "react";
 
 export default function PhoneNavbar({ scrollToSection }) {
@@ -45,9 +46,7 @@ export default function PhoneNavbar({ scrollToSection }) {
       <div className="display-name">
         <h2>Ahmad Hashim Farooq</h2>
         <button onClick={setDisplay} className="navbar-button">
-          ____<br></br>
-          ____<br></br>
-          ____
+          <img src={hamburger} alt="hamburger-icon"></img>
         </button>
       </div>
       <div
