@@ -305,8 +305,8 @@ h2 {
 .gif-img {
   border-radius: 300px;
   border-top-left-radius: 0;
-  height: 250px;
-  width: 350px;
+  height: 100%;
+  width: 100%;
   text-align: right;
 }
 
