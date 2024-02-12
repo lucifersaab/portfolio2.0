@@ -1,3 +1,6 @@
+.App {
+  overflow: hidden;
+}
 #tsparticles {
   position: fixed;
   height: 100%;
@@ -1056,7 +1059,22 @@ footer {
   }
 }
 
-@media (max-width: 1000px) {
+.loading-div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5em;
+  z-index: 10;
+  animation: glow 2s infinite;
+}
+@media (max-width: 750px) {
   .no-disply {
     display: none;
   }
@@ -1229,8 +1247,9 @@ footer {
     margin: 0 auto;
   }
 
-  .spline-element {
+  .spline {
     width: 400px;
+    position: relative;
   }
 
   .pointing-text {

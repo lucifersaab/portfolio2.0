@@ -13,6 +13,9 @@ import Pacman from "./../Media/Pacman-Game.mp4";
 import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
+import Loading from "./Loading";
+import Spline from "@splinetool/react-spline";
+import { SplineElement } from "./SplineElement";
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
   const [displayVideo, setDisplayVideo] = useState("");
@@ -23,28 +26,17 @@ export default function Projects({ section4Ref }) {
     { text: "BURGER APP", image: burgerthumb },
   ];
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
-  const Spline = React.lazy(() => import("@splinetool/react-spline"));
+  // const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
   useEffect(() => {
     if (window.screen.availWidth < 769) {
       setDisplayProjects(true);
     }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsSplineLoaded(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const splineElement = document.getElementById("spline-element");
-    if (splineElement) observer.observe(splineElement);
-
-    return () => observer.disconnect();
   }, []);
 
+  const splineLoadSetter = (val) => {
+    setIsSplineLoaded(val);
+  };
   const handleclick = () => {
     setDisplayProjects(true);
   };
@@ -55,37 +47,43 @@ export default function Projects({ section4Ref }) {
     setDisplayVideo(val);
     console.log(displayVideo);
   };
+  const handleClick = (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+    alert("Coordinates:", "x:", x, "y:", y);
+  };
   return (
     <>
+      {!isSplineLoaded && <Loading></Loading>}
       <div ref={section4Ref}></div>
-      <div className="no-disply">
-        <div id="spline-element">
-          {!isSplineLoaded && <div>Loading...</div>}
-          {isSplineLoaded && (
-            <Suspense
-              fallback={
-                <div className="centered-div">
-                  {" "}
-                  <div className="heading-cont">Loading</div>{" "}
-                </div>
-              }
-            >
-              <Spline scene="https://prod.spline.design/1hn6pUDV5jbdLWDC/scene.splinecode" />
-            </Suspense>
-          )}
+      <div className="no-disply" onClick={handleClick}>
+        <div
+          id="spline-element"
+          className="spline"
+          style={{ position: "relative" }}
+        >
           <div
             style={{
               position: "absolute",
               color: "white",
-              left: "35%",
-              top: "300%",
-              width: "60px",
-              height: "60px",
+              left: "32%",
+              top: "19%",
+              width: "20%",
+              height: "25%",
             }}
             onClick={handleclick}
           >
             {" "}
           </div>
+          <Suspense
+            fallback={
+              <div className="centered-div">
+                <div className="heading-cont">Loading</div>
+              </div>
+            }
+          >
+            <SplineElement splineLoadSetter={splineLoadSetter}></SplineElement>
+          </Suspense>
         </div>
       </div>
 
