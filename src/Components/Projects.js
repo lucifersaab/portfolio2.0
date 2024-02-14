@@ -51,7 +51,7 @@ export default function Projects({ section4Ref }) {
     <>
       {!isSplineLoaded && <Loading></Loading>}
       <div ref={section4Ref}></div>
-      <div className="no-disply" onClick={handleClick}>
+      <div className="no-disply">
         <div
           id="spline-element"
           className="spline"
