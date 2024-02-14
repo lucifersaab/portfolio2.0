@@ -14,7 +14,6 @@ import Splitwise from "./../Media/SplitwiseApp.mp4";
 import BurgerApp from "./../Media/BurgerApp.mp4";
 import Blender from "./../Media/Blender_Project.mp4";
 import Loading from "./Loading";
-import Spline from "@splinetool/react-spline";
 import { SplineElement } from "./SplineElement";
 export default function Projects({ section4Ref }) {
   const [displayProjects, setDisplayProjects] = useState(false);
@@ -47,11 +46,7 @@ export default function Projects({ section4Ref }) {
     setDisplayVideo(val);
     console.log(displayVideo);
   };
-  const handleClick = (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
-    alert("Coordinates:", "x:", x, "y:", y);
-  };
+
   return (
     <>
       {!isSplineLoaded && <Loading></Loading>}
