@@ -88,7 +88,8 @@ h2 {
   border-left: none;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-  z-index: 10;
+  z-index: 10 !important;
+
 }
 
 .phone-nav-container h3 {
