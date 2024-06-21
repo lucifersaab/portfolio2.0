@@ -26,7 +26,7 @@ export default function Main({
   });
   return (
     <>
-      <PhoneNavbar scrollToSection={scrollToSection}></PhoneNavbar>
+      <div style={{position:'sticky',top:0}}><PhoneNavbar scrollToSection={scrollToSection}></PhoneNavbar></div>
 
       <Intro></Intro>
       <About section1Ref={section1Ref}></About>
