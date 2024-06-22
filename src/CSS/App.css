@@ -440,8 +440,8 @@ h2 {
     rgba(148, 187, 233, 1) 100%
   );
   border-radius: 300px;
-  height: 50%;
-  width: 50%;
+  height: 400px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,7 +454,9 @@ h2 {
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
 }
 
 .skillbar-container2 {
@@ -462,7 +464,9 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: right;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
 }
 .skill-bars {
   display: flex;
@@ -541,18 +545,15 @@ h2 {
   font-weight: bold;
   padding: 20px;
 }
-
 .skill-wheel-content {
   width: 100%;
 }
-
 .skills-wheel:hover {
   cursor: pointer;
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #3702a0, 0 0 15px #d973eb,
     0 0 22px #e750e2, 0 0 25px #ea60ea, 0 0 37px #532763;
   transition: 0.15s ease-in;
 }
-
 .hide {
   opacity: 0;
   color: white;
@@ -563,7 +564,7 @@ h2 {
   font-size: 20px;
   height: 100%;
   padding: 50px;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .parent-bar {
@@ -1076,6 +1077,22 @@ footer {
   font-size: 2.5em;
   z-index: 10;
   animation: glow 2s infinite;
+}
+
+@media (max-width: 1400px) {
+  .skills-wheel{
+    width: 250px !important;
+    height: 250px !important;
+  }
+  
+  .skillbar-container, .skillbar-container2 {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .skill-bars, .skill-bars2{
+    height: 70px;
+  }
 }
 @media (max-width: 750px) {
   .no-disply {
